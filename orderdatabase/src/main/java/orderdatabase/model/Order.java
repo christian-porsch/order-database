@@ -1,13 +1,15 @@
 package orderdatabase.model;
 
+import java.util.List;
+
 public class Order {
 
     private String id;
-    private String name;
+    private List<Product> products;
 
-    public Order(String id, String name){
+    public Order(String id, List<Product> products){
         this.id = id;
-        this.name = name;
+        this.products = products;
 
     }
 
@@ -18,4 +20,13 @@ public class Order {
     public String getId() {
         return id;
     }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
+
+    public List<Product> getProducts(){
+        return products;
+    }
+
 }
